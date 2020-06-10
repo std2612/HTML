@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 상자 100px x 100px를 5개 만들어서 화면에 출력하고,
+        화면의 길이가 500px이하이면 상자가 50px x 50px로 변경되도록 반응형으로 작성하시오.
+        600px 이하이면 상자의 갯수가 5개에서 3개로 줄어들도록 번경하시오. */
+
+        body{
+            padding: 0;
+            margin: 0;
+        }
+
+        .box{
+            background-color: green;
+            display: inline-block;
+        }
+
+        @media (max-width: 600px){
+            .box{
+                width: 50px;
+                height: 50px;
+            }
+
+            .box:nth-of-type(4),
+            .box:nth-of-type(5){
+                /* opacity: 0; */
+
+                /* background-color: #fff; */
+
+                /* width: 0;
+                height: 0; */
+
+                display: none;
+                }
+        }
+
+        @media (min-width: 601px){
+            .box{
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    123
+</body>
+</html>
