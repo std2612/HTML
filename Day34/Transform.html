@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* transform : 요소를 회전, 확대 등의 다양한 변화를 줄 때 사용하는 속성.
+            Ex) 회전, 기울임, 이동, 확대, 축소
+            transform : 함수()
+            translate(x,y) : x, y만큼 이동
+            translateX(n)/translateY(n) : x/y축으로 n만큼 이동
+            scaleX()/scaleY() : 가로/세로를 기준으로 n배 확대, 축소
+            scale(w, h) : 가로를 기준으로 w배, 세로를 기준으로 h배 확대, 축소
+            rotate(angle) : angle만큼 시계 방향 회전
+            skewX(angle)/skewX(angle) : x/y축을 기준으로 angle만큼 기울임
+            skew(x-a, y-b) : x축으로 x-a만큼, y축으로 y-b만큼 기울임 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            position: relative;
+            height: 200px;
+            border: 1px solid red;
+        }
+
+        .box>div{
+            height: 50px;
+            width: 100px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: white;
+            border: black 1px solid;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        /* translate */
+        .tx{
+            transform: translateX(175px);
+        }
+
+        .ty{
+            transform: translateY(100px);
+        }
+
+        .txy{
+            transform: translate(175px, 100px);
+        }
+
+        /* translateZ는 혼자서는 의미가 없고, perspective(기준)을 통해 기준점을 설정 후
+        적용해야 반영이 됨.
+        translateZ의 값은 기준점보다 작아야 한다. 같거나 크면 해당 요소가 안보임 */
+        .tz{
+            transform: translate(350px, 100px) perspective(500px) translateZ(50px);
+        }
+
+        /* scale */
+        .sx{
+            transform: translateX(175px) scaleX(1.5);
+        }
+
+        .sy{
+            transform: translateY(100px) scaleY(1.5);
+        }
+
+        .s{
+            transform: translate(175px, 100px) scale(1.5, 1.5);
+        }
+
+        .sz{
+            transform: translate(350px, 100px) perspective(500px) scaleZ(1.5) translateZ(100px);
+        }
+
+        /* skew */
+        .skx{
+            transform: translateX(175px) skewX(30deg);
+        }
+
+        .sky{
+            transform: translateY(100px) skewY(30deg);
+        }
+
+        .sk{
+            transform: translate(175px, 100px) skew(30deg, 30deg);
+        }
+
+        /* rotate */
+        .r{
+            transform: translate(175px, 100px) rotate(30deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="stand">stand</div>
+        <div class="tx">translateX</div>
+        <div class="ty">translateY</div>
+        <div class="txy">translate</div>
+        <div class="tz">translateZ</div>
+    </div>
+    <div class="box">
+        <div class="stand">stand</div>
+        <div class="sx">scaleX</div>
+        <div class="sy">scaleY</div>
+        <div class="s">scale</div>
+        <div class="sz">scaleZ</div>
+    </div>
+    <div class="box">
+        <div class="stand">stand</div>
+        <div class="skx">skewX</div>
+        <div class="sky">skewY</div>
+        <div class="sk">skew</div>
+    </div>
+    <div class="box">
+        <div class="stand">stand</div>
+        <div class="r">rotate</div>
+    </div>
+</body>
+</html>
