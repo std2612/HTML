@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- a태그 : 다른 url로 이동하는 태그 -->
+    <!-- href속성 : 이동할 url -->
+    <!-- 현재 페이지와 같은 홈페이지 내의 다른 페이지로 이동하는 경우 -->
+    <!-- 현재 페이지와 다른 홈페이지로 이동하는 경우 -->
+    <a href="/Day30/TextTag.html">text 태그 예제</a><br>
+    <a href="./TextTag.html">text 태그 예제</a><br>
+    <a href="http://naver.com">네이버1</a><br>
+    <a href="//naver.com">네이버2</a><br>
+
+    <!-- a태그의 target속성 -->
+    <!-- target속성값이 _self인 경우 : 기본값 -->
+    <a href="//naver.com" target="_self">네이버 target : _self</a><br>
+    <!-- target속성값이 _blank인 경우 : 새 창에서 링크를 염 -->
+    <a href="//naver.com" target="_blank">네이버 target : _blank</a><br>
+    <!-- target속성값이 _parent인 경우 : 부모 창에서 링크를 염, 없는 경우 _self와 같음 -->
+    <a href="//naver.com" target="_parent">네이버 target : _parent</a><br>
+    <!-- target속성값이 _top인 경우 : 최고 조상에서 링크를 염, 없는 경우 _self와 같음 -->
+    <a href="//naver.com" target="_top">네이버 target : _top</a><br>
+    <!-- download속성을 추가하면 해당 링크로 이동하는 것이 아니라 다운로드를 함 -->
+    <a href="dog.jpg" download="" target="_blank">강아지 이미지</a><br>
+
+    <!-- 전화번호 연결 : href에 tel:을 입력 -->
+    <a href="tel:+821012345678">010-1234-5678</a><br>
+    <!-- 메일 연결 : mailto:메일명을 입력 -->
+    <a href="mailto:stajun@naver.com">강사에게 메일 보내기</a><br>
+
+    <!-- 새 창에서 네이버로 이동하게 하는 버튼을 생성 -->
+    <a href="//naver.com" target="_blank">
+        <button>
+            네이버
+        </button>
+    </a><br>
+
+    <!-- 싱커 : 현재 페이지내의 특정 위치로 이동하는 기능
+        싱커를 사용하려면 id가 할당되어 있어야 한다. -->
+    <a href="#move">이동</a>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div id="move">도착</div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
