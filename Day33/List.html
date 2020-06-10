@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list</title>
+    <style>
+        /* list와 관련된 CSS속성은 list마커와 관련된 속성이다.
+        list마커란 list앞에 있는 숫자나, 기호를 마커라 부른다.
+        메뉴를 구성할 때 div태그를 이용해서 구성할 수도 있지만
+        주로 ul태그와 li태그를 이용하여 구성하고,
+        이 때 메뉴에 마커를 없애서 사용을 한다. */
+        /*
+            list-style-type : 마커의 기본 모양을 선택
+            list-style-position : 
+            list-style-image : 
+        */
+        ul{
+            /* list-style-type: none; */
+            list-style-position: inside;
+            list-style-image: url(star.png);
+        }
+
+        li{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>사과</li>
+        <li>배</li>
+        <li>포도</li>
+    </ul>
+</body>
+</html>

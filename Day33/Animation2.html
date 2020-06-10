@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        @keyframes move {
+            0%{ 
+                left: 0;
+                background-color: rgb(0, 0, 0);
+            }
+            50%{
+                left: calc(100% - 50px);
+                background-color: rgb(255, 255, 255);
+            }
+            100%{
+                left: 0;
+                background-color: rgb(0, 0, 0);
+            }
+        }
+
+        @keyframes move2 {
+            0%{ 
+                right: 0;
+            }
+            50%{
+                right: calc(100% - 50px);
+            }
+            100%{
+                right: 0;
+            }
+        }
+
+        .box{
+            width: 50px;
+            height: 50px;
+            /* background-color: green; */
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation-name: move;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        .box2{
+            width: 50px;
+            height: 50px;
+            /* background-color: green; */
+            position: absolute;
+            top: 0;
+            right: 0;
+            animation-name: move2;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        .box3{
+            /* 일반적으로 left와 right를 같이 쓰지 않고, top과 bottom을 같이 쓰지 않음.
+            width가 지정되어 있지 않는 경우는 left와 right를 같이 써서 width를 결정해준다.
+            height가 지정되어 있지 않은 경우는 top과 bottom을 같이 써서 height를 결정해준다.
+            position이 absolute인 경우 가로와 세로의 길이가 주어지지 않으면 자동으로 할당되지 않음 */
+            position: absolute;
+            bottom: 0;
+            height: 100px;
+            left: 0;
+            right: 0;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>
