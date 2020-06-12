@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery 예제3</title>
+    <script src="//code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <input type="text" id="input1"><br>
+    <button id="btn1">클릭</button>
+    <div class="gugudan"></div>
+    <script>
+        // input태그에서 val()을 통해 가져온 값들을 문자열로 가져오기
+        $('#btn1').click(function(){
+            var tmp=$('#input1').val();
+            tmp=parseInt(tmp)+10;
+            console.log(tmp);
+        });
+
+        $('#btn1').click(function(){
+            var i=parseInt($('#input1').val());
+            var str='';
+            for(j=1; j<=9; j++){
+                str+=i+' x '+j+' = '+i*j+'<br>'
+            }
+            $('.gugudan').html(str);
+        });
+    </script>
+</body>
+</html>

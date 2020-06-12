@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery 예제8</title>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/fontawesome.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .ham{
+            width: 50px;
+            height: 50px;
+            background-color: aliceblue;
+            float: right;
+            font-size: 25px;
+            cursor: pointer;
+            text-align: center;
+            line-height: 50px;
+        }
+        ul{
+            list-style: none;
+        }
+        .nav{
+            width: 100px;
+            height: 150px;
+            display: flex;
+            background-color: aliceblue;
+            position: absolute;
+            top: 55px;
+            right: -100px;
+        }
+        .menu{
+            width: 100px;
+            height: 50px;
+        }
+        .link-menu{
+            display: block;
+            height: 50px;
+            box-sizing: border-box;
+            text-decoration: none;
+            color: black;
+            font-size: 25px;
+            text-align: center;
+            line-height: 48px;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        $(function(){
+            var show=false;
+            $('.ham').click(function(){
+                if(!show){
+                    $('.nav').stop().animate({right:'0'}, 500);
+                }else{
+                    $('.nav').stop().animate({right:'-100px'}, 500);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="ham">
+        <i class="fas fa-bars"></i>
+    </div>
+    <nav class="nav">
+        <ul class="menu-box">
+            <li class="menu">
+                <a href="#" class="link-menu">메뉴1</a>
+            </li>
+            <li class="menu">
+                <a href="#" class="link-menu">메뉴2</a>
+            </li>
+            <li class="menu">
+                <a href="#" class="link-menu">메뉴3</a>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

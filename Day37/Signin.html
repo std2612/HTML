@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="//code.jquery.com/jquery-3.4.1.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        body{
+            background-color: rgb(245, 246, 247);
+        }
+
+        .box-main{
+            width: 460px;
+            margin: 0 auto;
+            height: 1200px;
+        }
+
+        .box-logo{
+            height: 80px;
+            width: 100%;
+            margin: 40px 0px;
+            text-align: center;
+        }
+
+        .box-logo>a{
+            color: rgb(0, 200, 80);
+            line-height: 80px;
+            font-weight: bold;
+            font-size: 50px;
+        }
+
+        .box-input{
+            height: 50px;
+            box-sizing: border-box;
+            border: solid 1px #dadada;
+            padding: 10px 35px 10px 15px;
+            margin: 0px 0px 14px;
+            background-color: white;
+        }
+
+        .box-input>input{
+            height: 16px;
+            padding: 7px 0 6px;
+            width: 100%;
+            border: none;
+            font-size: 15px;
+            line-height: 16px;
+            -webkit-appearance: none;
+            color: #000;
+            background: #fff;
+            cursor: pointer;
+        }
+
+        .btn-login{
+            display: block;
+            width: 100%;
+            height: 61px;
+            background-color: rgb(0, 200, 80);
+            color: #fff;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+            margin: 30px 0px 14px;
+        }
+
+        .box-etc{
+            height: 26px;
+        }
+
+        .box-etc-left{
+            height: 100%;
+            float: left;
+            position: relative;
+        }
+
+        .box-etc-left>input[type=checkbox]{
+            width: 26px;
+            height: 26px;
+            display: inline-block;
+            -webkit-appearance: none;
+        }
+
+        .box-etc-left>label{
+            line-height: 26px;
+            height: 26px;
+            padding-left: 36px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 95px;
+            font-size: 12px;
+            background-image: url(/Day35/chk.png);
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+
+        .box-etc-left>label.check{
+            background-image: url(/Day35/chk2.png);
+        }
+
+        .box-etc-right{
+            height: 100%;
+            float: right;
+            font-size: 12px;
+        }
+
+        .link-login{
+            text-decoration: underline;
+        }
+
+        .font-gray{
+            color: rgb(102, 102, 102);
+        }
+
+        .btn-onoff{
+            border: none;
+            background-color: rgb(245, 246, 247);
+            cursor: pointer;
+        }
+
+        .bar{
+            position: relative;
+            top: -1px;
+        }
+
+        .box-q{
+            display: inline-block;
+            width: 17px;
+            height: 17px;
+            background-image: url(question.png);
+            position: relative;
+            top: 4px;
+            cursor: pointer;
+        }
+
+        .hr{
+            border-top: 1px solid rgb(228, 228, 229);
+            margin: 28px 0px 20px;
+        }
+
+        .font-gray2{
+            font-size: 12px;
+            color: rgb(142, 142, 142);
+        }
+
+        .box-find{
+            text-align: center;
+        }
+
+        .box-ad{
+            width: 460px;
+            height: 166px;
+            border: 1px solid rgb(220, 230, 238);
+            background-color: rgb(229, 237, 243);
+            box-sizing: border-box;
+            margin: 47px auto 15px;
+        }
+
+        @media (max-width: 700px){
+            .box-main{
+            width: 100%;
+            padding: 0px 10px;
+            box-sizing: border-box;
+            }
+        }
+    </style>
+    <script>
+        $(function(){
+            $('.box-etc-left>label').click(function(){
+                $(this).toggleClass('check');
+            });
+        })
+    </script>
+</head>
+<body>
+    <form action="" method="POST">
+        <div class="box-main">
+            <div class="box-logo">
+                <a href="//naver.com" target="_blank">NAVER</a>
+            </div>
+            <div class="box-input">
+                <input type="text" placeholder="아이디">
+            </div>
+            <div class="box-input">
+                <input type="password" placeholder="비밀번호">
+            </div>
+            <button class="btn-login">로그인</button>
+            <div class="box-etc">
+                <div class="box-etc-left">
+                    <input type="checkbox" name="login" id="login">
+                    <label for="login">로그인 상태 유지</label>
+                </div>
+                <div class="box-etc-right">
+                    <a href="#" class="link-ip font-gray">IP보안</a>
+                    <button class="btn-onoff font-gray">OFF</button>
+                    <span class="bar font-gray">|</span>
+                    <a href="#" class="link-login font-gray">일회용 로그인</a>
+                    <div class="box-q"></div>
+                </div>
+            </div>
+            <div class="hr"></div>
+            <div class="box-find">
+                <a href="#" class="font-gray2">아이디 찾기</a>
+                <span class="bar font-gray2">|</span>
+                <a href="#" class="font-gray2">비밀번호 찾기</a>
+                <span class="bar font-gray2">|</span>
+                <a href="#" class="font-gray2">회원가입</a>
+            </div>
+            <div class="box-ad"></div>
+        </div>
+    </form>
+</body>
+</html>

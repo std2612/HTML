@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery 예제4</title>
+    <script src="//code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <input type="text" id="input1"><br>
+    <select name="month" id="month">
+        <option value="">월</option>
+    </select>
+    <select name="day" id="day">
+        <option value="">일</option>
+    </select>
+    <script>
+        // JQuery change 이벤트 : input/select/textarea태그에서 발생
+        // change이벤트는 값을 입력하고 엔터를 치거나, 포커스가 해제되면 동작
+        $('#input1').change(function(){
+            tmp=$(this).val();
+            console.log(tmp);
+        });
+        str='<option value="">월</option>';
+        for(i=1; i<=12; i++){
+            str+='<option>'+i+'월</option>';
+        }
+        $('#month').html(str);
+        $('#month').change(function(){
+            month=$(this).val();
+            lastDay=0;
+            switch(month){
+                case '1월': case '3월': case '5월': case '7월': case '8월': case '10월': case '12월':
+                    lastDay=31;
+                    break;
+                case '2월':
+                    lastDay=28;
+                    break;
+                case '4월': case '6월': case '9월': case '11월':
+                    lastDay=30;
+                    break;
+            }
+            str='<option value="">일</option>';
+            for(i=1; i<=lastDay; i++){
+                str+='<option>'+i+'일</option>';
+            }
+            $('#day').html(str);
+        });
+    </script>
+</body>
+</html>
