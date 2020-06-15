@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQueary 예제</title>
+    <script src="/js/jquery.js"></script>
+    <style>
+        *{
+            border: 2px solid black;
+            padding: 10px;
+            margin: 0;
+        }
+        .bg-red{
+            background-color: red;
+        }
+        .bg-green{
+            background-color: green;
+        }
+        .bg-blue{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li>메뉴1</li>
+                <li>메뉴2</li>
+                <li>메뉴3</li>
+            </ul>
+        </nav>
+    </div>
+    <script>
+        $(function(){
+            $('li').parent().addClass('bg-red');
+        });
+    </script>
+</body>
+</html>

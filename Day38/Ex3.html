@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제</title>
+    <script src="/js/jquery.js"></script>
+</head>
+<body>
+    <button id="add">추가</button>
+    <div class="res"></div>
+    <script>
+        $(function(){
+            $('#add').click(function(){
+                var str=$('.res').html();
+                str+=   '<div>'+
+                            '<input type="text">'+
+                            '<button>클릭</button>'+
+                        '</div>';
+                $('.res').html(str);
+                registerBtn();
+                // 스크립트로 태그를 구성하면, 해당 태그에는 이벤트가 자동으로 등록되지 않는다.
+                // 그래서 새로 추가된 요소에는 이벤트를 따로 등록해줘야 한다.
+            });
+        });
+        function registerBtn(){
+            $('.res button').click(function(){
+                console.log($(this).prev().val());
+            });
+        }
+    </script>
+</body>
+</html>
