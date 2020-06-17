@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/jquery.js"></script>
+    <style>
+        span{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>설문지</h1>
+    <div class="question">
+        <div class="main-q">
+            <span>질문1</span>
+            <input type="text" placeholder="질문을 입력하세요"> 
+            <button id="confirm">확인</button><br>
+            <button id="sub-add">서브 질문 추가</button> 
+        </div>
+    </div>
+    <button id="main-add">메인 질문 추가</button>
+    <script>
+        $(function(){
+            var cnt=2;
+            var cnt2=1;
+            $('#confirm').click(function(){
+                console.log($(this).prev().val());
+            });
+            $('#sub-add').click(function(){
+                var q=($(this).prevAll().last().text());
+                var str='<div>'+
+                            '<span>'+q+'-'+cnt2+++'</span> '+
+                            '<input type="text" placeholder="질문을 입력하세요"> '+
+                            '<button id="confirm">확인</button> '+
+                            '<button id="sub-del">삭제</button>'+
+                        '</div>';
+                $(this).prev().after(str);
+                $(this).prev().find('#confirm').last().click(function(){
+                    console.log($(this).prev().val());
+                });
+                $(this).prev().find('#sub-del').last().click(function(){
+                    $(this).parent().remove();
+                });
+            });
+            $('#main-add').click(function(){
+                var str2=   '<div class="main-q">'+
+                                '<span>질문'+cnt+++'</span> '+
+                                '<input type="text" placeholder="질문을 입력하세요"> '+
+                                '<button id="confirm">확인</button><br>'+
+                                '<button id="sub-add">서브 질문 추가</button> '+
+                            '</div>';
+                $('.question').append(str2);
+                $('.question').children().last().find('#confirm').click(function(){
+                    console.log($(this).prev().val());
+                });
+                var cnt3=1;
+                $('.question').children().last().find('#sub-add').click(function(){
+                    var q=($(this).prevAll().last().text());
+                    var str='<div>'+
+                                '<span>'+q+'-'+cnt3+++'</span> '+
+                                '<input type="text" placeholder="질문을 입력하세요"> '+
+                                '<button id="confirm">확인</button> '+
+                                '<button id="sub-del">삭제</button>'+
+                            '</div>';
+                    $(this).prev().after(str);
+                    $(this).prev().find('#confirm').last().click(function(){
+                        console.log($(this).prev().val());
+                    });
+                    $(this).prev().find('#sub-del').last().click(function(){
+                        $(this).parent().remove();
+                    });
+                });
+            });
+        });
+        
+    </script>
+</body>
+</html>
