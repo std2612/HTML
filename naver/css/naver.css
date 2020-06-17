@@ -1,0 +1,372 @@
+@charset "utf-8";
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    min-width: 1190px;
+}
+
+body,
+button,
+input,
+select,
+table,
+textarea{
+    font-family: -apple-system,BlinkMacSystemFont,'Malgun Gothic','맑은 고딕',helvetica,'Apple SD Gothic Neo',sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    color: #202020;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    width: 1190px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* whale 박스 관련 CSS */
+.box-whale{
+    height: 49px;
+    background-color: rgb(0, 203, 174);
+}
+
+.link-whale{
+    display: block;
+    width: 100%;
+    height: 49px;
+}
+
+.icon-whale{
+    display: block;
+    margin-top: 9px;
+    width: 110px;
+    height: 30px;
+    background-position: -276px -225px;
+    float: left;
+}
+
+.img-banner-whale{
+    width: 150px;
+    height: auto;
+    display: block;
+    float: left;
+    margin-left: 120px;
+}
+
+.text-banner{
+    font-weight: bold;
+    margin-left: 388px;
+    color: #fff;
+    font-size: 13px;
+    line-height: 49px;
+    letter-spacing: -.25px;
+}
+
+.text-underline{
+    text-decoration: underline;
+}
+
+.bn-btn-download{
+    color: #00cbae;
+    background-color: #fff1c0;
+    font-size: 11px;
+    width: 68px;
+    height: 28px;
+    margin-left: 20px;
+    letter-spacing: -1px;
+    border-radius: 2px;
+    border: 0;
+}
+
+.bn-btn-close{
+    color: #fff;
+    font-size: 11px;
+    position: absolute;
+    top: 0;
+    right: 30px;
+    height: 49px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+}
+
+.bn-btn-close::after{
+    display: inline-block;
+    background-position: -429px -116px;
+    width: 23px;
+    height: 23px;
+    content: '';
+    margin: -5px 0 0 4px;
+    vertical-align: top;
+}
+
+/* 검색창 관련 CSS */
+.box-container-search{
+    height: 161px;
+}
+
+.logo-area{
+    position: relative;
+    height: 100%;
+}
+
+.logo{
+    position: absolute;
+    top: 50%;
+    left: -9px;
+    margin-top: -32px;
+}
+
+.link-logo{
+    display: inline-block;
+    width: 222px;
+    height: 52px;
+    vertical-align: top;
+    background-position: 0 -161px;
+}
+
+.blind{
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+.service-area{
+    position: absolute;
+    top: 12px;
+    right: 27px;
+}
+
+.link-set{
+    font-size: 11px;
+    float: left;
+    color: #404040;
+    line-height: 16px;
+}
+
+.link-set::after{
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    margin: -3px 0 0 3px;
+    content: '';
+    vertical-align: top;
+    background-position: -391px -225px;
+}
+
+.sa-bar{
+    float: left;
+    width: 1px;
+    height: 10px;
+    margin: 3px 7px;
+    background-color: #e4e8eb;
+}
+
+.service-area .link-jrnaver{
+    float: left;
+}
+
+.service-area .link-jrnaver .icon-jrnaver{
+    display: inline-block;
+    width: 60px;
+    height: 10px;
+    margin: 3px;
+    vertical-align: top;
+    background-position: -348px -260px;
+}
+
+.service-area .link-jrnaver:hover .icon-jrnaver{
+    display: inline-block;
+    width: 60px;
+    height: 10px;
+    vertical-align: top;
+    background-position: -214px -308px;
+}
+
+.service-area .link-happybin{
+    float: left;
+    margin-left: 6px;
+}
+
+.service-area .link-happybin .icon-happybin{
+    display: inline-block;
+    width: 34px;
+    height: 11px;
+    margin: 3px 3px 2px;
+    vertical-align: top;
+    background-position: -253px -323px;
+}
+
+.service-area .link-happybin:hover .icon-happybin{
+    display: inline-block;
+    width: 34px;
+    height: 11px;
+    vertical-align: top;
+    background-position: -214px -323px;
+}
+
+.service-area::after {
+    display: table;
+    clear: both;
+    table-layout: fixed;
+    content: '';
+}
+
+fieldset{
+    border: 0;
+}
+
+.search-area{
+    position: absolute;
+    top: 50%;
+    left: 268px;
+    margin-top: -27px;
+}
+
+.search-area .green-window{
+    position: relative;
+    width: 582px;
+    height: 52px;
+    border: 2px solid #19ce60;
+    border-radius: 2px;
+}
+
+.search-area .input-text{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    width: 444px;
+    height: 24px;
+    margin: 1px;
+    padding: 13px;
+    transition: margin .2s cubic-bezier(.215,.61,.355,1);
+    color: #000;
+    outline: 0;
+    background-color: #fff;
+    border: 0;
+    border-radius: 0;
+}
+
+.search-area .btn-submit{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 56px;
+    border-radius: 0 2px 2px 0;
+    background-color: #19ce60;
+    border: 0;
+}
+
+.search-area .btn-submit .icon-search-submit{
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    vertical-align: top;
+    background-position: -429px -172px;
+}
+
+.search-area .btn-keyboard{
+    position: absolute;
+    z-index: 400;
+    top: 0;
+    right: 84px;
+    bottom: 0;
+    width: 36px;
+}
+
+.search-area .btn-keyboard .icon-keyboard{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+    width: 20px;
+    height: 12px;
+    margin: -6px 0 0 -10px;
+    vertical-align: top;
+    background-position: -400px -276px;
+}
+
+.search-area .btn-keyboard:hover .icon-keyboard{
+    display: inline-block;
+    width: 20px;
+    height: 12px;
+    vertical-align: top;
+    background-position: -64px -404px;
+}
+
+.search-area .btn-keyboard .msg-keyboard{
+    position: absolute;
+    top: 42px;
+    left: -16px;
+    display: none;
+    width: 68px;
+    height: 37px;
+    vertical-align: top;
+    background-position: -161px -115px;
+}
+
+.search-area .btn-keyboard:hover .msg-keyboard{
+    display: block;
+}
+
+.search-area .btn-arw{
+    position: absolute;
+    top: 0;
+    right: 64px;
+    bottom: 0;
+    width: 22px;
+}
+
+.search-area .btn-arw .icon-arr{
+    display: inline-block;
+    width: 10px;
+    height: 5px;
+    vertical-align: top;
+    background-position: -429px -394px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -2px 0 0 -5px;
+}
+
+/* 메뉴창 관련 CSS */
+.box-container-menu{
+    height: 50px;
+    border-top: 1px solid rgb(222, 226, 229);
+    border-bottom: 1px solid rgb(237, 237, 237);
+}
+
+/* 콘텐츠 관련 CSS */
+.box-container-contents{
+    height: 2685px;
+}
+
+.box-container-footer{
+    height: 423px;
+    background-color: rgb(250, 251, 252);
+}
+
+/* 배경 이미지 클래스 */
+.bn-btn-close::after,
+.link-set::after,
+.bg-44265f{
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main.44265f.png);
+    background-repeat: no-repeat;
+    background-size: 471px 442px;
+}
