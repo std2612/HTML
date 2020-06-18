@@ -115,6 +115,7 @@ a{
 /* 검색창 관련 CSS */
 .box-container-search{
     height: 161px;
+    border-bottom: 1px solid #e4e8eb;
 }
 
 .logo-area{
@@ -157,6 +158,10 @@ a{
     float: left;
     color: #404040;
     line-height: 16px;
+}
+
+.link-set:hover{
+    text-decoration: underline;
 }
 
 .link-set::after{
@@ -333,28 +338,346 @@ fieldset{
     width: 22px;
 }
 
-.search-area .btn-arw .icon-arr{
+.search-area .btn-arw.fold .icon-arr{
     display: inline-block;
     width: 10px;
     height: 5px;
     vertical-align: top;
     background-position: -429px -394px;
+}
+
+.search-area .btn-arw .icon-arr{
     position: absolute;
     top: 50%;
     left: 50%;
+    display: inline-block;
+    width: 10px;
+    height: 5px;
     margin: -2px 0 0 -5px;
+    vertical-align: top;
+    background-position: -361px -308px;
+}
+
+.search-area .reatcmp {
+    position: absolute;
+    z-index: 300;
+    top: 54px;
+    left: 0;
+    width: 586px;
+    background-color: rgb(255, 255, 255);
+}
+
+.api-atcmp-wrap{
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #bec8d8;
+    background-color: #fff;
+    color: #666;
+    zoom: 1;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    line-height: 18px;
+    font-family: '돋움',dotum,helvetica,'나눔바른고딕 옛한글','NanumBarunGothic YetHangul','새굴림',sans-serif;
+}
+
+.api-atcmp-wrap .words .info-words{
+    padding: 17px 15px 15px;
+    font-size: 12px;
+    line-height: 23px;
+}
+
+.api-atcmp-wrap .words{
+    overflow: hidden;
+}
+
+.api-atcmp-wrap .func{
+    overflow: hidden;
+    clear: both;
+    width: 100%;
+    padding: 8px 0;
+    border: 1px solid #ebeef3;
+    border-width: 1px 0 0;
+    background: #f9fafc;
+    color: #666;
+    font-size: 11px;
+    line-height: 1.3em;
+    letter-spacing: -1px;
+}
+
+.api-atcmp-wrap .func .fl{
+    float: left;
+    padding: 2px 0 0 12px;
+}
+
+.api-atcmp-wrap .func a{
+    margin: 0 3px;
+    color: #666;
+}
+
+.api-atcmp-wrap .func .atcmp-bar{
+    float: none;
+    padding: 0;
+    display: inline-block;
+    height: 10px;
+    margin: -1px 4px 1px;
+    border-left: 1px solid #e3e7ee;
+    background: transparent none;
+    vertical-align: middle;
+}
+
+.api-atcmp-wrap .func .report{
+    color: #00a617;
+}
+
+.api-atcmp-wrap .func span{
+    float: right;
+    padding: 2px 12px 0 0;
+}
+
+.api-atcmp-wrap .atcmp-helper{
+    position: absolute;
+    display: none;
+    overflow: hidden;
+    bottom: 32px;
+    right: 16px;
+    height: 18px;
+    padding: 3px 4px 0;
+    line-height: 18px;
+    color: #444;
+    border: 1px solid #00c73c;
+    background-color: #f6fbf7;
+    z-index: 10;
+}
+
+.api-atcmp-wrap .atcmp-helper .icon-search{
+    width: 1px;
+    height: 13px;
+    padding-left: 23px;
+    margin-top: 1px;
+    vertical-align: top;
+    display: inline-block;
+    overflow: hidden;
+    background: url(https://ssl.pstatic.net/sstatic/search/pc/img/atcmp_spat_v7.png) no-repeat;
+    color: transparent;
+    text-indent: 0;
+    background-position: -34px -64px;
 }
 
 /* 메뉴창 관련 CSS */
 .box-container-menu{
     height: 50px;
-    border-top: 1px solid rgb(222, 226, 229);
-    border-bottom: 1px solid rgb(237, 237, 237);
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.12);
+}
+
+.group-nav{
+    position: relative;
+    overflow: hidden;
+    padding: 11px 220px 11px 0;
+}
+
+.list-nav{
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 30px;
+    float: left;
+    letter-spacing: -.3px;
+    color: #000;
+}
+
+.list-nav .nav-item+.nav-item {
+    margin-left: 18px;
+}
+
+.list-nav .nav-item{
+    float: left;
+}
+
+.list-nav.type-fix .nav{
+    color: #03c75a;
+}
+
+.list-nav .icon-mail{
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    margin: 3px 9px 0 0;
+    vertical-align: top;
+    background-position: -429px -227px;
+}
+
+.icon-tv{
+    display: inline-block;
+    width: 12px;
+    height: 14px;
+    margin: 9px 2px 0 0;
+    vertical-align: top;
+    background-position: -458px -80px;
+}
+
+.list-nav+.list-nav{
+    margin-left: 18px;
+}
+
+.list-nav .nav{
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn-more{
+    font-size: 13px;
+    line-height: 30px;
+    float: left;
+    min-width: 70px;
+    margin-left: 17px;
+    text-align: right;
+    color: #202020;
+}
+
+.btn-more:hover{
+    text-decoration: underline;
+}
+
+.btn-more::after{
+    display: inline-block;
+    width: 11px;
+    height: 7px;
+    margin-left: 7px;
+    content: '';
+    vertical-align: 2px;
+    background-position: -458px -432px;
+}
+
+.box-container-menu.ly-open .group-nav .btn-more{
+    color: #0ecd5a;
+}
+
+.box-container-menu.ly-open .group-nav .btn-more:after{
+    display: inline-block;
+    width: 11px;
+    height: 7px;
+    vertical-align: top;
+    vertical-align: 2px;
+    background-position: -458px -420px;
+}
+
+.box-container-menu .group-nav .ly-btn-area{
+    position: absolute;
+    z-index: 10;
+    top: 11px;
+    right: 0;
+    display: none;
+    width: 220px;
+    text-align: right;
+    background-color: #fff;
+}
+
+.box-container-menu.ly-open .group-nav .ly-btn-area{
+    display: block;
+}
+
+.box-container-menu .group-nav .ly-btn-area .btn{
+    display: inline-block;
+    margin-left: 3px;
+    padding: 7px 13px 5px;
+    border: 1px solid #dae1e6;
+    border-radius: 15px;
+    background-color: #fff;
+    color: inherit;
+}
+
+.group-keyword {
+    position: absolute;
+    top: 11px;
+    right: 30px;
+    overflow: hidden;
+    width: 210px;
+    height: 30px;
+}
+
+.group-keyword .keyword-area{
+    font-size: 13px;
+    line-height: 30px;
+    position: relative;
+    z-index: 1;
+    height: 30px;
+}
+
+.group-keyword .link-keyword{
+    display: block;
+    width: 190px;
+    padding-right: 20px;
+    text-decoration: none;
+}
+
+.group-keyword .icon-error{
+    display: block;
+    float: left;
+    width: 14px;
+    height: 14px;
+    margin: 8px 5px 0 0;
+    background-position: -39px -427px;
+}
+
+.group-keyword .icon-error+.keyword{
+    font-size: 12px;
+    letter-spacing: -.5px;
+    text-overflow: clip;
+    color: #505050;
+}
+
+.group-keyword .keyword{
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.group-keyword:after{
+    position: absolute;
+    top: 11px;
+    right: 0;
+    display: inline-block;
+    width: 14px;
+    height: 9px;
+    content: '';
+    vertical-align: top;
+    background-position: -389px -211px;
+}
+
+.box-container-menu .group-nav .ly-btn-area .btn-set::before{
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    margin: 2px 5px 0 0;
+    content: '';
+    vertical-align: top;
+    background-position: -458px -175px;
+}
+
+.btn:hover{
+    text-decoration: underline;
+}
+
+.box-container-menu .group-nav .ly-btn-area .btn-reset::before{
+    display: inline-block;
+    width: 10px;
+    height: 13px;
+    margin-right: 6px;
+    content: '';
+    vertical-align: top;
+    background-position: -458px -157px;
+}
+
+.box-container-menu .group-nav .ly-btn-area .btn-save {
+    color: #fff;
+    border-color: #00c73c;
+    background-color: #19ce60;
 }
 
 /* 콘텐츠 관련 CSS */
 .box-container-contents{
-    height: 2685px;
+    height: 2579px;
 }
 
 .box-container-footer{
@@ -362,11 +685,38 @@ fieldset{
     background-color: rgb(250, 251, 252);
 }
 
+.main{
+    padding: 20px 30px;
+    letter-spacing: -.2px;
+}
+
+.column-left{
+    float: left;
+    width: 750px;
+    height: 2539px;
+    background-color: aliceblue;
+}
+
+.column-right{
+    float: right;
+    width: 350px;
+    height: 1701px;
+    background-color: aliceblue;
+}
+
 /* 배경 이미지 클래스 */
 .bn-btn-close::after,
 .link-set::after,
+.btn-more::after,
+.group-keyword:after,
+.btn-set::before,
+.btn-reset::before,
 .bg-44265f{
     background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main.44265f.png);
     background-repeat: no-repeat;
     background-size: 471px 442px;
+}
+
+.display-none{
+    display: none;
 }
