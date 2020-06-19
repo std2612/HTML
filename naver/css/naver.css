@@ -24,6 +24,7 @@ textarea{
 
 a{
     text-decoration: none;
+    color: inherit;
 }
 
 .container{
@@ -110,6 +111,12 @@ a{
     content: '';
     margin: -5px 0 0 4px;
     vertical-align: top;
+}
+
+#header{
+    position: relative;
+    z-index: 2000;
+    background-color: #fff;
 }
 
 /* 검색창 관련 CSS */
@@ -466,7 +473,7 @@ fieldset{
 
 /* 메뉴창 관련 CSS */
 .box-container-menu{
-    height: 50px;
+    position: relative;
     box-shadow: 0 1px 3px 0 rgba(0,0,0,.12);
 }
 
@@ -675,6 +682,88 @@ fieldset{
     background-color: #19ce60;
 }
 
+.box-container-menu .ly-service{
+    position: absolute;
+    top: 52px;
+    right: 0;
+    left: 0;
+    display: none;
+    padding: 20px 30px 22px;
+    border-top: 1px solid #e4e8eb;
+    background-color: #fff;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,.12);
+}
+
+.box-container-menu .group-service{
+    display: table;
+    overflow: hidden;
+    width: 1128px;
+    margin: 0 auto;
+    table-layout: fixed;
+    border-width: 0 1px;
+    border-style: solid;
+    border-color: #e4e8eb;
+}
+
+.box-container-menu .list-service{
+    font-size: 13px;
+    line-height: 26px;
+    display: table-cell;
+    padding: 0 18px 0 19px;
+}
+
+.box-container-menu .list-service .service-title{
+    font-weight: 700;
+    margin-bottom: 3px;
+    color: #000;
+}
+
+.box-container-menu .service-data a:hover{
+    text-decoration: underline;
+}
+
+.box-container-menu .list-service+.list-service{
+    border-left: 1px solid #e4e8eb;
+}
+
+.box-container-menu .list-service .link-dic{
+    display: inline-block;
+    margin-top: 5px;
+    color: grey;
+}
+
+.box-container-menu .list-service .link-dic::after{
+    display: inline-block;
+    width: 6px;
+    height: 10px;
+    margin-left: 7px;
+    content: '';
+    vertical-align: top;
+    vertical-align: 0;
+    background-position: -417px -116px;
+}
+
+.box-container-menu .list-service input[type=checkbox]{
+    display: none;
+}
+
+.box-container-menu .list-service .icon-chk{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 4px 9px 0 0;
+    vertical-align: top;
+    background-position: -43px -404px;
+}
+
+.box-container-menu .list-service .service-data.chk-check .icon-chk{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: top;
+    background-position: -22px -404px;
+}
+
 /* 콘텐츠 관련 CSS */
 .box-container-contents{
     height: 2579px;
@@ -711,6 +800,8 @@ fieldset{
 .group-keyword:after,
 .btn-set::before,
 .btn-reset::before,
+.link-dic::after,
+.list-service .icon-chk,
 .bg-44265f{
     background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main.44265f.png);
     background-repeat: no-repeat;
