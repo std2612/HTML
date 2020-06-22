@@ -14,6 +14,13 @@ $(function(){
             str='더보기';
         }else{
             str='접기';
+            $('.type-empty').css('display', 'none');
+            $('.NM_FAVORITE_LIST').css('display', '');
+            $('.NM-FAVORITE-EDIT-LY .service-data').removeClass('chk-check');
+            $('.NM-FAVORITE-EDIT-LY').css('display', 'none');
+            $('.type-empty').html(
+            '<li class="nav-item"><div class="empty-box type-point"></div></li><li class="nav-item"><div class="empty-box"></div></li><li class="nav-item"><div class="empty-box"></div></li><li class="nav-item"><div class="empty-box"></div></li><li class="nav-item"><div class="empty-box"></div></li>'
+            );
         }
         $('.ly-service').css('display', str4);
         if(str4=='block'){
@@ -41,6 +48,8 @@ $(function(){
         $('.btn-save').css('display','');
         $('.NM-FAVORITE-ALL-LY').css('display', 'none');
         $('.NM-FAVORITE-EDIT-LY').css('display', '');
+        $('.NM_FAVORITE_LIST').css('display', 'none');
+        $('.type-empty').css('display', '');
     });
 
     $('.btn-arw').click(function(){
@@ -64,9 +73,34 @@ $(function(){
     }, function(){
         $('.atcmp-helper').css('display','none');
     });
-
+    
+    var cnt=1;
     $('.list-service label').click(function(){
-        $(this).parents('.service-data').toggleClass('chk-check');
-        event.preventDefault();
+        if($('.type-empty').find('.empty-box').length==0){
+            alert('최대5개까지 설정할 수 있습니다.');
+            event.preventDefault();
+        }else{
+            $(this).parents('.service-data').toggleClass('chk-check');
+            var val=$(this).children('input').val();
+            var text=$(this).text();
+            var html='<span data-id="'+val+'">'+text+'</span>';
+            $('.type-point').parent().html(html);
+            $('.type-empty').find('.empty-box').first().addClass('type-point');
+            event.preventDefault();
+        }
+    });
+
+    $('.btn-reset').click(function(){
+        alert('초기설정으로 돌아갑니다.');
+        $('.btn-more').click();
+    });
+
+    $('.btn-save').click(function(){
+        if($('.type-empty').find('.empty-box').length==5){
+            alert('선택된 메뉴가 없습니다. 초기설정으로 돌아갑니다.');
+            $('.btn-more').click();
+        }else{
+            $('.btn-more').click();
+        }
     });
 });

@@ -764,6 +764,30 @@ fieldset{
     background-position: -22px -404px;
 }
 
+.box-container-menu .list-nav.type-empty .empty-box.type-point{
+    border-color: #19ce60;
+    background-color: #fff;
+}
+
+.box-container-menu .list-nav.type-empty .empty-box{
+    width: 68px;
+    height: 28px;
+    border: 1px solid #dae1e6;
+    border-radius: 2px;
+    background-color: #f7f9fa;
+}
+
+.box-container-menu .list-nav.type-empty .nav-item+.nav-item {
+    margin-left: 8px;
+}
+
+.box-container-menu .list-nav:after{
+    display: table;
+    clear: both;
+    table-layout: fixed;
+    content: '';
+}
+
 /* 콘텐츠 관련 CSS */
 .box-container-contents{
     height: 2579px;
@@ -793,6 +817,102 @@ fieldset{
     background-color: aliceblue;
 }
 
+#veta-branding, #veta-top{
+    position: relative;
+}
+
+.sc-newscast{
+    width: 750px;
+    margin-top: 12px;
+}
+
+.sc-newscast .group-issue{
+    line-height: 24px;
+    position: relative;
+    padding: 12px 15px 11px 15px;
+    border: 1px solid #dae1e6;
+    background-color: #f7f9fa;
+    height: 24px;
+}
+
+.sc-newscast .group-issue .issue-area {
+    float: left;
+}
+
+.sc-newscast .group-issue .issue-area:after{
+    display: table;
+    clear: both;
+    table-layout: fixed;
+    content: '';
+}
+
+.sc-newscast .group-issue .link-media{
+    font-size: 13px;
+    font-weight: 700;
+    float: left;
+    margin-right: 7px;
+    text-decoration: none;
+    color: #000;
+}
+
+.sc-newscast .group-issue .link-media:after{
+    display: inline-block;
+    width: 6px;
+    height: 10px;
+    margin: 7px 0 0 6px;
+    content: '';
+    vertical-align: top;
+    background-position: -417px -90px;
+}
+
+.sc-newscast .group-issue .list-issue{
+    float: left;
+    overflow: hidden;
+    width: 310px;
+    height: 24px;
+}
+
+.sc-newscast .group-issue .direct-area{
+    font-weight: 700;
+    float: right;
+}
+
+.sc-newscast .group-issue .direct-area:after{
+    display: table;
+    clear: both;
+    table-layout: fixed;
+    content: '';
+}
+
+.sc-newscast .group-issue .direct-area .link-news{
+    color: #3565c9;
+}
+
+.sc-newscast .group-issue .direct-area .link-direct{
+    margin: 0 4px 0 7px;
+    color: #202020;
+}
+
+.sc-newscast .group-issue .direct-area .link-direct,
+.sc-newscast .group-issue .direct-area .link-news {
+    font-size: 13px;
+    float: left;
+    height: 24px;
+    text-decoration: none;
+}
+
+.sc-newscast .group-issue .direct-area .link-news:after{
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    margin-left: 8px;
+    content: '';
+    vertical-align: top;
+    vertical-align: 3px;
+    border-radius: 50%;
+    background-color: #c8ccd1;
+}
+
 /* 배경 이미지 클래스 */
 .bn-btn-close::after,
 .link-set::after,
@@ -802,6 +922,7 @@ fieldset{
 .btn-reset::before,
 .link-dic::after,
 .list-service .icon-chk,
+.sc-newscast .group-issue .link-media:after,
 .bg-44265f{
     background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main.44265f.png);
     background-repeat: no-repeat;
