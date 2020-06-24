@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="css/naver.css">
 	<script src="js/jquery.js"></script>
 	<script src="js/naver.js"></script>
+	<script src="/naver/js/rolling.js"></script>
 </head>
 
 <body>
@@ -125,7 +126,7 @@
 							</a>
 						</li>
 					</ul>
-					<ul class="list-nav NM_FAVORITE_LIST" style>
+					<ul class="list-nav NM-FAVORITE-LIST" style>
 						<li class="nav-item">
 							<a href="" class="nav">사전</a>
 						</li>
@@ -540,8 +541,8 @@
 		<div class="container main">
 			<div id="NM-INT-LEFT" class="column-left">
 				<div id="veta-top">
-					<iframe id="da_iframe_time" name="da_iframe_time"
-						src="https://nv.veta.naver.com/fxshow?su=SU10599&amp;nrefreshx=0" data-veta-preview="main_time" title="광고"
+					<iframe id="da-iframe-time" name="da-iframe-time"
+						src="https://nv.veta.naver.com/fxshow?su=SU10599&amp;nrefreshx=0" data-veta-preview="main-time" title="광고"
 						width="750" height="135" marginheight="0" marginwidth="0" scrolling="no" frameborder="0">
 					</iframe>
 					<span class="veta-bd-t"></span>
@@ -554,13 +555,1047 @@
 					<div id="NM-NEWSSTAND-HEADER" class="group-issue">
 						<div class="issue-area">
 							<a href="#" class="link-media">연합뉴스</a>
-							<div id="yna-rolling" class="list-issue">롤링</div>
+							<div id="yna-rolling" class="list-issue">
+								<a href="#" class="issue">'갓갓' 공범 안승진 얼굴 드러내…작은 체구에 안경 착용</a>
+								<a href="#" class="issue">55→61→92…부산항 확진 러 선원 밀접접촉자 계속 늘어</a>
+								<a href="#" class="issue">이재용 또 현장 경영…이번에는 수원서 생활가전사업 전략 점검</a>
+								<a href="#" class="issue">이달 30일부터 '병역거부자 대체복무' 신청받는다…심사위 구성</a>
+								<a href="#" class="issue">신천지 "코로나 완치자 4천명 혈장 공여"</a>
+								<a href="#" class="issue">'음주운전' 강정호 "자격 없다는 건 알지만, 야구할 수 있기를"</a>
+								<a href="#" class="issue">강남 토지거래허가구역에서 전세 '품귀'…전셋값 급등 우려</a>
+								<a href="#" class="issue">日신문 "수출규제, 일본에 타격"…한일 외교 55년 상기하기도</a>
+								<a href="#" class="issue">트럼프 "볼턴 왜곡" 청와대發 연합뉴스 기사 리트윗하며 "봤지?"</a>
+								<a href="#" class="issue">통일부 "대북전단 살포 시도에 깊은 유감…엄정 조치할 것"</a>
+							</div>
 						</div>
 						<div class="direct-area">
 							<a href="#" class="link-news">네이버뉴스</a>
 							<a href="#" class="link-direct">연예</a>
 							<a href="#" class="link-direct">스포츠</a>
 							<a href="#" class="link-direct">경제</a>
+						</div>
+					</div>
+					<div id="NM-NEWSSTAND-TITLE" class="group-title">
+						<a href="#" class="link-newsstand">뉴스스탠드</a>
+						<div id="NM-NEWSSTAND-data-buttons" class="sort-area">
+						<a href="#" class="btn-sort">구독한 언론사</a>
+						<a href="#" class="btn-sort sort-on">전체언론사</a>
+						</div>
+						<div id="NM-NEWSSTAND-view-buttons" class="set-area">
+						<a href="#" class="btn-set2">
+							<i class="icon-list bg-44265f">
+								<span class="blind">리스트형</span>
+							</i>
+						</a>
+						<a href="#" class="btn-set2 set-on">
+							<i class="icon-tile bg-44265f">
+								<span class="blind">썸네일형</span>
+							</i>
+						</a>
+						<a href="#" class="btn-set2">
+							<i class="icon-set bg-44265f">
+								<span class="blind">설정</span>
+							</i>
+						</a>
+						</div>
+					</div>
+					<div id="NM-NEWSSTAND-VIEW-CONTAINER" style="position: relative;">
+						<div id="NM-NEWSSTAND-DEFAULT-LIST" class="group-news" style="display: none;"></div>
+						<div id="NM-NEWSSTAND-DEFAULT-THUMB" class="group-news" style>
+							<a href="#" class="pm-btn-prev-l -NM-UI-PAGE-PREV display-none">
+								<i class="icon-btn bg-44265f">
+									<span class="blind">이전</span>
+								</i>
+              </a>
+              <a href="#" class="pm-btn-next-l -NM-UI-PAGE-NEXT">
+								<i class="icon-btn bg-44265f">
+									<span class="blind">이전</span>
+								</i>
+              </a>
+              <div class="-NM-UI-PAGE-CONTAINER" style="height: 100%; overflow: hidden;">
+                <div style="width: 750px; float: left;">
+                  <div class="tile-view">
+                    <div class="frame-area">
+                      <i class="line to-right1"></i>
+                      <i class="line to-right2"></i>
+                      <i class="line to-right3"></i>
+                      <i class="line to-bottom1"></i>
+                      <i class="line to-bottom2"></i>
+                      <i class="line to-bottom3"></i>
+                      <i class="line to-bottom4"></i>
+                      <i class="line to-bottom5"></i>
+                    </div>
+                    <div class="thumb-area">
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          1<img height="20" alt="아시아경제" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/277.png">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="#" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="한국일보" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/038.png">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="#" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="한겨레" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/028.png">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="#" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="JTBC" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/904.png">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="#" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="스포츠조선" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/076.png">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="#" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="KBS World" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/326.png">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="#" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="중앙데일리" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/330.png">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="#" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="일요신문" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/925.png">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=925" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="TheAsiaN" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/949.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=949" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="인더스트리뉴스" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/803.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=803" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="채널예스" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/361.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=361" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="여성신문" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/310.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=310" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="아주경제" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/921.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=921" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="데이터뉴스" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/804.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=804" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="인민망" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/923.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=923" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="MONEY" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/806.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=806" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="이코노미조선" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/982.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=982" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="코리아타임스" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/040.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=040" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="이코노믹리뷰" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/813.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=813" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="중앙SUNDAY" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/353.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=353" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="낚시춘추" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/984.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=984" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="UPI뉴스" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/823.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=823" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="YONHAPNEWS" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/946.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=946" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="스포츠월드" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/396.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=396" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="thumb-area display-none">
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          2<img height="20" alt="아시아경제" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/277.png">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="#" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="한국일보" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/038.png">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="#" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="한겨레" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/028.png">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="#" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="JTBC" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/904.png">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="#" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="스포츠조선" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/076.png">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="#" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="KBS World" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/326.png">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="#" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="중앙데일리" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/330.png">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="#" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="일요신문" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/925.png">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=925" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="TheAsiaN" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/949.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=949" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="인더스트리뉴스" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/803.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=803" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="채널예스" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/361.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=361" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="여성신문" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/310.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=310" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="아주경제" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/921.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=921" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="데이터뉴스" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/804.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=804" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="인민망" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/923.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=923" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="MONEY" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/806.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=806" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="이코노미조선" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/982.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=982" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="코리아타임스" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/040.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=040" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="이코노믹리뷰" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/813.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=813" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="중앙SUNDAY" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/353.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=353" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="낚시춘추" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/984.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=984" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="UPI뉴스" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/823.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=823" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="YONHAPNEWS" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/946.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=946" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="스포츠월드" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/396.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=396" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="thumb-area display-none">
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          3<img height="20" alt="아시아경제" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/277.png">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="#" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="한국일보" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/038.png">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="#" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="한겨레" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/028.png">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="#" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="JTBC" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/904.png">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="#" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="스포츠조선" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/076.png">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="#" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="KBS World" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/326.png">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="#" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="중앙데일리" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/330.png">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="#" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="일요신문" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/925.png">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=925" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="TheAsiaN" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/949.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=949" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="인더스트리뉴스" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/803.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=803" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="채널예스" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/361.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=361" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="여성신문" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/310.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=310" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="아주경제" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/921.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=921" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="데이터뉴스" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/804.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=804" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="인민망" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/923.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=923" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="MONEY" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/806.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=806" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="이코노미조선" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/982.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=982" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="코리아타임스" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/040.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=040" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="이코노믹리뷰" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/813.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=813" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="중앙SUNDAY" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/353.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=353" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="낚시춘추" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/984.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=984" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="UPI뉴스" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/823.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=823" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="YONHAPNEWS" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/946.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=946" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="스포츠월드" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/396.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=396" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="thumb-area display-none">
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          4<img height="20" alt="아시아경제" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/277.png">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="#" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="한국일보" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/038.png">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="#" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="한겨레" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/028.png">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="#" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="JTBC" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/904.png">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="#" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="스포츠조선" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/076.png">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="#" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="KBS World" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/326.png">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="#" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="중앙데일리" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/330.png">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="#" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="일요신문" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/925.png">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=925" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="TheAsiaN" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/949.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=949" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="인더스트리뉴스" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/803.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=803" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="채널예스" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/361.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=361" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="여성신문" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/310.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=310" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="아주경제" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/921.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=921" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="데이터뉴스" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/804.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=804" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="인민망" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/923.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=923" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="MONEY" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/806.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=806" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="이코노미조선" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/982.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=982" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="코리아타임스" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/040.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=040" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="이코노믹리뷰" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/813.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=813" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="중앙SUNDAY" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/353.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=353" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="낚시춘추" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/984.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=984" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="UPI뉴스" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/823.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=823" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="YONHAPNEWS" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/946.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=946" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                      <div class="thumb-box -NM-NEWSSTAND-THUMB -NM-NEWSSTAND-THUMB-press-valid">
+                        <a href="#" class="thumb">
+                          <img height="20" alt="스포츠월드" class="news-logo" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/396.png" loading="lazy">
+                        </a>
+                        <div class="popup-wrap">
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-subscribe-press">구독</a>
+                          <a href="#" class="btn-popup -NM-NEWSSTAND-THUMB-unsubscribe-press" style="display: none;">해지</a>
+                          <a href="http://newsstand.naver.com/?list=&amp;pcode=396" class="btn-popup">기사보기</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 						</div>
 					</div>
 				</div>
