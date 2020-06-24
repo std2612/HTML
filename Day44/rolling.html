@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>롤링 예제</title>
+    <script src="/js/jquery.js"></script>
+    <style>
+        .ad{
+            width: 750px;
+            height: 135px;
+            margin: 0 auto;
+            margin-top: 50px;
+            border: 1px solid black;
+            overflow: hidden;
+        }
+
+        .link-ad{
+            display: block;
+            height: 135px;
+        }
+
+        .link-ad:first-of-type{
+            margin-top: -270px;
+        }
+    </style>
+</head>
+<body>
+    <div class="ad">
+        <a href="#" class="link-ad">
+            <img src="https://ssl.pstatic.net/tveta/libs/1282/1282632/f7e0d0b5ed8afe57bc73_20200622094707792.jpg" alt="" width="750px" height="135px">
+        </a>
+        <a href="#" class="link-ad">
+            <img src="https://ssl.pstatic.net/tveta/libs/1282/1282632/3e1512f09fe372577f5e_20200622094720733.jpg" alt="" width="750px" height="135px">
+        </a>
+        <a href="#" class="link-ad">
+            <img src="https://ssl.pstatic.net/tveta/libs/1282/1282632/9cef7ecd1b1f61ac5a0c_20200622094723736.jpg" alt="" width="750px" height="135px">
+        </a>
+    </div>
+    <script>
+    $(function(){
+        setInterval(function(){
+            $('.link-ad').first().animate({'margin-top':'-135px'}, 1000, function(){
+                $('.link-ad').last().detach().prependTo('.ad').css('margin-top', '-270px');
+                $(this).removeAttr('style');
+            });
+        }, 2000);
+    });
+    </script>
+</body>
+</html>

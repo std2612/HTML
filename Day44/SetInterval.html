@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval</title>
+    <script src="/js/jquery.js"></script>
+    <style>
+        .timer,
+        .box-record{
+            width: 500px;
+            height: 200px;
+            margin: 0 auto;
+            border: 1px solid black;
+            background-color: aliceblue;
+            box-sizing: border-box;
+        }
+
+        .box-record{
+            margin-top: 10px;
+            height: 500px;
+            padding: 10px;
+            font-size: 40px;
+            text-align: center;
+            overflow: auto;
+        }
+
+        .box-timer{
+            width: 300px;
+            height: 60px;
+            margin: 20px auto;
+            border: 1px solid black;
+            font-size: 40px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .box-remocon{
+            width: 300px;
+            height: 60px;
+            margin: 0 auto;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 55px;
+            box-sizing: border-box;
+        }
+
+        .box-timer span{
+            line-height: 55px;
+        }
+
+        .box-remocon button{
+            width: 60px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        .box-title{
+            text-align: center;
+            font-size: 20px;
+            height: 30px;
+            line-height: 30px;
+        }
+        
+        .box{
+            height: 49px;
+            line-height: 49px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="timer">
+        <div class="box-timer">
+            <span class="hour">00</span><span class="minute">:00</span><span class="second">:00</span><span class="msecond">.00</span>
+        </div>
+        <div class="box-remocon">
+            <button class="start">시작</button>
+            <button class="record" style="display: none;">기록</button>
+            <button class="stop">중지</button>
+            <button class="reset">초기화</button>
+        </div>
+    </div>
+    <div class="box-record">
+        <div class="box-title">기록</div>
+        <div class="box record1"></div>
+        <div class="box record2"></div>
+        <div class="box record3"></div>
+    </div>
+    <script>
+        var ms=0;
+        $('.start').click(function(){
+            var timer=setInterval(function(){
+                var msecond=numberPad((ms+=1)%100, 2);
+                $('.msecond').text('.'+msecond);
+                var second=numberPad(parseInt(ms%6000/100), 2);
+                $('.second').text(':'+second);
+                var minute=numberPad(parseInt(ms%360000/6000), 2);
+                $('.minute').text(':'+minute);
+                var hour=numberPad(parseInt(ms/360000), 2);
+                $('.hour').text(hour);
+            }, 10);
+            
+            $('.stop').click(function(){
+                clearInterval(timer);
+                $('.record').css('display', 'none');
+                $('.start').css('display', '');
+            });
+            
+            $('.reset').click(function(){
+                clearInterval(timer);
+                ms=0;
+                var msecond=numberPad(ms%100, 2);
+                $('.msecond').text('.'+msecond);
+                var second=numberPad(parseInt(ms%6000/100), 2);
+                $('.second').text(':'+second);
+                var minute=numberPad(parseInt(ms%360000/6000), 2);
+                $('.minute').text(':'+minute);
+                var hour=numberPad(parseInt(ms/36000), 2);
+                $('.hour').text(hour);
+                $('.record').css('display', 'none');
+                $('.start').css('display', '');
+                str='<div class="box-title">기록</div>';
+                $('.box-record').html(str);
+                cnt=1;
+            });
+
+            $('.record').css('display', '');
+            $('.start').css('display', 'none');
+        });
+
+        cnt=1;
+        $('.record').click(function(){
+            str='';
+            str=str+numberPad(parseInt(ms/360000), 2)+':'+
+            numberPad(parseInt(ms%360000/6000), 2)+':'+
+            numberPad(parseInt(ms%6000/100), 2)+'.'+
+            numberPad(ms%100, 2);
+            if(cnt%3==1){
+                $('.box-record').children('.record1').html(str);
+            }else if(cnt%3==2){
+                $('.box-record').children('.record2').html(str);
+            }else{
+                $('.box-record').children('.record3').html(str);
+            }
+            cnt++;
+        });
+
+        function numberPad(n, width) {
+            n = n + '';
+            return n.length >= width ? n : new Array(width - n.length + 1).join('0') + n;
+        }
+    </script>
+</body>
+</html>
