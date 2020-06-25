@@ -15,7 +15,7 @@ $(function(){
         }else{
             str='접기';
             $('.type-empty').css('display', 'none');
-            $('.NM_FAVORITE_LIST').css('display', '');
+            $('.NM-FAVORITE-LIST').css('display', '');
             $('.NM-FAVORITE-EDIT-LY .service-data').removeClass('chk-check');
             $('.NM-FAVORITE-EDIT-LY').css('display', 'none');
             $('.type-empty').html(
@@ -48,7 +48,7 @@ $(function(){
         $('.btn-save').css('display','');
         $('.NM-FAVORITE-ALL-LY').css('display', 'none');
         $('.NM-FAVORITE-EDIT-LY').css('display', '');
-        $('.NM_FAVORITE_LIST').css('display', 'none');
+        $('.NM-FAVORITE-LIST').css('display', 'none');
         $('.type-empty').css('display', '');
     });
 
@@ -133,5 +133,16 @@ $(function(){
         }else{
             $(this).removeClass('display-none');
         }
+    });
+
+    $('.btn-next').click(function(){
+        $('.list-card>.card').first().animate({'margin-left':'-351px'}, 1000, function(){
+            $(this).first().detach().appendTo('.list-card').removeAttr('style');
+        });
+    });
+
+    $('.btn-prev').click(function(){
+        $('.list-card>.card').last().detach().prependTo('.list-card').css('margin-left', '-351px');
+        $('.list-card>.card').first().animate()({'margin-left':'0'}, 1000);
     });
 });

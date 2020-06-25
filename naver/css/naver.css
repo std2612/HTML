@@ -27,6 +27,15 @@ a{
     color: inherit;
 }
 
+i{
+    font-style: normal;
+}
+
+ol,
+ul{
+    list-style: none;
+}
+
 .container{
     width: 1190px;
     height: 100%;
@@ -915,7 +924,7 @@ fieldset{
     display: block;
 }
 
-.sc-newscast .group-issue .list-issue .issue {
+.sc-newscast .group-issue .list-issue .issue{
     font-size: 13px;
     display: block;
     overflow: hidden;
@@ -1260,22 +1269,464 @@ fieldset, img{
     border-color: #bec8d8;
 }
 
+.sc-login{
+    width: 100%;
+    height: 135px;
+    background-color: #f7f9fa;
+    border: 1px solid #dae1e6;
+    box-sizing: border-box;
+    padding: 16px 16px 12px 17px;
+}
+
+.login-msg{
+    padding-left: 3px;
+    color: gray;
+    line-height: 16px;
+    font-size: 12px;
+    letter-spacing: -.2px;
+}
+
+.icon-naver{
+    display: inline-block;
+    width: 60px;
+    height: 12px;
+    margin: 2px 5px 0 0;
+    vertical-align: top;
+    background-position: -270px -276px;
+}
+
+.link-login{
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 11px;
+    padding: 15px 0;
+    text-align: center;
+    color: #fff;
+    border: 1px solid #15c654;
+    border-radius: 2px;
+    background-color: #19ce60;
+}
+
+.sub-area{
+    margin: 14px 8px 0 4px;
+}
+
+.sc-login .sub-area::after{
+    display: table;
+    clear: both;
+    table-layout: fixed;
+    content: '';
+}
+
+.sc-login .sub-area .look-box{
+    float: left;
+}
+
+.sc-login .sub-area .look-box::before{
+    display: inline-block;
+    width: 10px;
+    height: 14px;
+    margin: -1px 1px 1px;
+    content: '';
+    vertical-align: top;
+    background-position: -458px -138px;
+}
+
+.sc-login .sub-area .link-look{
+    color: #404040;
+}
+
+.sc-login .sub-area .link-look+.link-look::before{
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    margin: 0 5px 0 2px;
+    content: '';
+    vertical-align: 3px;
+    border-radius: 50%;
+    background-color: #d7dce0;
+}
+
+.sc-login .sub-area .link-join{
+    float: right;
+    color: #505050;
+}
+
+.sc-login .sub-area .link-join::before{
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    margin: 2px 5px 0 0;
+    content: '';
+    vertical-align: top;
+    background-position: -458px -207px;
+}
+
+.sc-timesquare{
+    position: relative;
+    width: 348px;
+    height: 47px;
+    margin: 12px 0;
+    letter-spacing: -.25px;
+    border: 1px solid #dae1e6;
+}
+
+.sc-timesquare .card-wrap{
+    overflow: hidden;
+    height: 47px;
+    padding-right: 67px;
+}
+
+.sc-timesquare .card-nav{
+    position: absolute;
+    top: 11px;
+    right: 10px;
+    overflow: hidden;
+}
+
+.sc-timesquare .card-nav .btn-nav{
+    float: left;
+    border: 1px solid #e4e8eb;
+    background-color: #fff;
+}
+
+.sc-timesquare .card-nav .btn-prev::before{
+    display: inline-block;
+    width: 6px;
+    height: 9px;
+    margin: 7px 8px 6px;
+    content: '';
+    vertical-align: top;
+    background-position: -265px -218px;
+}
+
+.sc-timesquare .card-nav .btn-nav+.btn-nav{
+    margin-left: -1px;
+}
+
+.sc-timesquare .card-nav .btn-next::before{
+    display: inline-block;
+    width: 6px;
+    height: 9px;
+    margin: 7px 8px 6px;
+    content: '';
+    vertical-align: top;
+    background-position: -417px -147px;
+}
+
+.sc-login .sub-area .link-look:hover,
+.sc-login .sub-area .link-join:hover{
+    text-decoration: underline;
+}
+
+.sc-timesquare .card-news{
+    display: inline-block;
+    overflow: hidden;
+    padding: 14px 0 13px 16px;
+    width: 332px;
+}
+
+.sc-timesquare .card-news .news-badge{
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 18px;
+    float: left;
+    height: 18px;
+    margin-right: 8px;
+    padding: 0 7px;
+    vertical-align: top;
+    border: 1px solid #202020;
+    border-radius: 10px;
+}
+
+.sc-timesquare .card-news .news-badge.type-flash{
+    color: #3291f8;
+    border-color: #3291f8;
+}
+
+.sc-timesquare .card-news .news{
+    font-size: 13px;
+    line-height: 20px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #404040;
+}
+
+.sc-timesquare .card-weather{
+    font-size: 13px;
+    line-height: 29px;
+    display: inline-block;
+    overflow: hidden;
+    padding: 9px 0 9px 16px;
+    width: 332px;
+}
+
+.sc-timesquare .card-weather.icon-w07::before{
+    display: block;
+    width: 29px;
+    height: 29px;
+    float: left;
+    margin-right: 9px;
+    content: '';
+    background-position: 0 -68px;
+}
+
+.sc-timesquare .card-weather .current-box{
+    float: left;
+}
+
+.sc-timesquare .card-weather .current{
+    font-size: 15px;
+    vertical-align: top;
+}
+
+.sc-timesquare .card-weather .state{
+    margin-left: 5px;
+}
+
+.sc-timesquare .card-weather .degree-box{
+    float: left;
+    margin-left: 9px;
+}
+
+.sc-timesquare .card-weather .min{
+    color: #e9564a;
+}
+
+.sc-timesquare .card-weather .max{
+    color: #2586ee;
+}
+
+.sc-timesquare .card-weather .max::before{
+    display: inline-block;
+    width: 5px;
+    height: 11px;
+    margin: 0 3px;
+    content: '';
+    vertical-align: -1px;
+    background-position: -417px -131px;
+}
+
+.sc-timesquare .card-air{
+    line-height: 18px;
+    display: inline-block;
+    overflow: hidden;
+    padding: 14px 0 15px 16px;
+    white-space: nowrap;
+    width: 332px;
+    
+}
+
+.sc-timesquare .card-air .list-air{
+    float: left;
+    overflow: hidden;
+}
+
+.sc-timesquare .card-air .air-item{
+    float: left;
+    color: #505050;
+}
+
+.sc-timesquare .card-air .state{
+    font-size: 13px;
+    margin-left: 8px;
+    color: #202020;
+}
+
+.sc-timesquare .card-air .state.state-good:before{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    content: '';
+    vertical-align: top;
+    background-position: -382px -357px;
+}
+
+.sc-timesquare .card-air .location{
+    display: block;
+    overflow: hidden;
+    padding-left: 9px;
+    text-align: right;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: grey;
+    padding-right: 67px;
+}
+
+.sc-timesquare .card-air .air-item+.air-item::before{
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    margin: 0 10px;
+    content: '';
+    vertical-align: -1px;
+    background-color: #e4e8eb;
+}
+
+.list-card{
+    width: 500%;
+}
+
+.sc-themecast{
+    padding: 35px 0 27px;
+    letter-spacing: -.25px;
+}
+
+.sc-themecast .group-title{
+    overflow: hidden;
+    padding-bottom: 17px;
+}
+
+.sc-themecast .group-title .title-area{
+    float: left;
+}
+
+.sc-themecast .group-title .title-area .title{
+    font-size: 14px;
+    color: #000;
+}
+
+.sc-themecast .group-title .title-area .dsc{
+    margin-left: 8px;
+    color: grey;
+}
+
+.sc-themecast .group-title .info-area{
+    float: right;
+}
+
+.sc-themecast .group-title .info-area .info{
+    color: grey;
+}
+
+.sc-themecast .group-title .info-area .new{
+    color: #000;
+}
+
+.sc-themecast .group-title .info-area .btn-set{
+    position: relative;
+    margin-left: 14px;
+    color: #505050;
+}
+
+.sc-themecast .group-title .info-area .btn-set::before{
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    margin-right: 4px;
+    content: '';
+    vertical-align: -1px;
+    opacity: .7;
+    background-position: -458px -223px;
+}
+
+.sc-themecast .group-title .info-area .btn-set:after{
+    position: absolute;
+    top: 2px;
+    left: -8px;
+    width: 1px;
+    height: 12px;
+    content: '';
+    background-color: #e4e8eb;
+}
+
+.sc-themecast .main-category{
+    position: relative;
+}
+
+.pm-btn-prev{
+    position: absolute;
+    z-index: 10;
+    left: -22px;
+}
+
+.sc-themecast .main-category .pm-btn-prev{
+    top: 6px;
+    left: -23px;
+}
+
+.pm-btn-prev .icon-btn{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    vertical-align: top;
+    background-position: -47px -357px;
+}
+
+.pm-btn-next {
+    position: absolute;
+    z-index: 10;
+    right: -13px;
+}
+
+.sc-themecast .main-category .pm-btn-next{
+    top: 6px;
+    right: -18px;
+}
+
+.pm-btn-next .icon-btn{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    vertical-align: top;
+    background-position: -92px -357px;
+}
+
+.NM-THEME-CATE-FLICK .eg-flick-viewport{
+    position: relative;
+    z-index: 5;
+    overflow: hidden;
+    min-height: 100%;
+    width: 100%;
+    height: 49px;
+}
+
+.NM-THEME-CATE-FLICK .eg-flick-viewport .eg-flick-camera{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.NM-THEME-CATE-FLICK .eg-flick-viewport .eg-flick-camera .eg-flick-panel{
+    width: 750px;
+    position: absolute;
+    left: 0px;
+}
+
 /* 배경 이미지 클래스 */
 .bn-btn-close::after,
 .link-set::after,
 .btn-more::after,
 .group-keyword::after,
-.btn-set::before,
+.box-container-menu .group-nav .ly-btn-area .btn-set::before,
 .btn-reset::before,
 .link-dic::after,
 .list-service .icon-chk,
 .sc-newscast .group-issue .link-media::after,
 .sc-newscast .group-title .link-newsstand::before,
 .sc-newscast .group-title .link-newsstand::after,
+.look-box::before,
+.link-join::before,
+.btn-prev::before,
+.btn-next::before,
+.max::before,
+.state.state-good:before,
+.air-item+.air-item::before,
+.sc-themecast .group-title .info-area .btn-set::before,
 .bg-44265f{
     background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main.44265f.png);
     background-repeat: no-repeat;
     background-size: 471px 442px;
+}
+
+.icon-w07::before{
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_weather_time.284fc7.png);
+    background-repeat: no-repeat;
+    background-size: 199px 165px;
 }
 
 .display-none{
