@@ -145,4 +145,101 @@ $(function(){
         $('.list-card>.card').last().detach().prependTo('.list-card').css('margin-left', '-351px');
         $('.list-card>.card').first().animate()({'margin-left':'0'}, 1000);
     });
+
+    $('.main-category .pm-btn-next').click(function(){
+        if($('.id-movie').hasClass('selected')||$('.id-wedding').hasClass('selected')||$('.id-farm').hasClass('selected')){
+            $('.eg-flick-panel').animate({'left':'-=750px'}, 300);
+            $('.main-category').find('.selected').parents('.eg-flick-panel').next().children().children().first().children().addClass('selected');
+            $('.main-category').find('.selected').first().removeClass('selected');
+        }else{
+            $('.main-category').find('.selected').parent().next().children().addClass('selected');
+            $('.main-category').find('.selected').first().removeClass('selected');
+            if(!$('.id-enter').hasClass('selected')){
+                $(this).prev().removeClass('display-none');
+            }
+            if($('.id-school').hasClass('selected')){
+                $(this).addClass('display-none');
+            }
+        }
+        themeBodyView();
+    });
+
+    $('.main-category .pm-btn-prev').click(function(){
+        if($('.id-job').hasClass('selected')||$('.id-culture').hasClass('selected')||$('.id-show').hasClass('selected')){
+            $('.eg-flick-panel').animate({'left':'+=750px'}, 300);
+            $('.main-category').find('.selected').parents('.eg-flick-panel').prev().children().children().last().children().addClass('selected');
+            $('.main-category').find('.selected').last().removeClass('selected');
+        }else{
+            $('.main-category').find('.selected').parent().prev().children().addClass('selected');
+            $('.main-category').find('.selected').last().removeClass('selected');
+            if($('.id-enter').hasClass('selected')){
+                $(this).addClass('display-none');
+            }
+            if(!$('.id-school').hasClass('selected')){
+                $(this).next().removeClass('display-none');
+            }
+        }
+        themeBodyView();
+    });
+
+    $('.category-item').click(function(){
+        $('.selected').removeClass('selected')
+        $(this).children().addClass('selected');
+        if(!$('.id-enter').hasClass('selected')){
+            $('.main-category .pm-btn-next').prev().removeClass('display-none');
+        }
+        if($('.id-school').hasClass('selected')){
+            $('.main-category .pm-btn-next').addClass('display-none');
+        }
+        if($('.id-enter').hasClass('selected')){
+            $('.main-category .pm-btn-prev').addClass('display-none');
+        }
+        if(!$('.id-school').hasClass('selected')){
+            $('.main-category .pm-btn-prev').next().removeClass('display-none');
+        }
+        themeBodyView();
+    });
+    themeBodyView();
+    function themeBodyView(){
+        var target=$('.tab.selected').attr('data-target');
+        $('.theme-cont .theme-body').addClass('display-none');
+        $('.theme-cont>.'+target).removeClass('display-none')
+    }
+
+    $('#tab-title').children().click(function(){
+        $('#tab-title').children().children().attr('aria-selected', 'false');
+        $(this).children().attr('aria-selected', 'true');
+        adBodyView();
+        tabRandom();
+    });
+
+    adBodyView();
+    function adBodyView(){
+        var target=$('.tab[aria-selected=true]').attr('data-target');
+        $('.shop-wrap .shop-content').addClass('display-none');
+        $('.shop-wrap .'+target).removeClass('display-none');
+    }
+
+    tabRandom();
+    function tabRandom(){
+        var target=$('.tab[aria-selected=true]').attr('data-target');
+        var arr=[];
+        $('.group-mall .link-mall').removeClass('random');
+        for(; arr.length<4;){
+            var r=getRandom(1, 12);
+            if(arr.indexOf(r)>=0){
+                continue;
+            }
+            arr.push(r);
+            if(r<=6){
+                $('.'+target+' .mall-area').eq(0).find('.link-mall').eq(r-1).addClass('random');
+            }else{
+                $('.'+target+' .mall-area').eq(1).find('.link-mall').eq(r-7).addClass('random');
+            }
+        }
+    }
+
+    function getRandom(min, max){
+        return Math.floor(Math.random()*(max-min+1)+1);
+    }
 });
