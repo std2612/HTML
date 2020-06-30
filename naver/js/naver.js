@@ -135,13 +135,13 @@ $(function(){
         }
     });
 
-    $('.btn-next').click(function(){
+    $('.card-nav .btn-next').click(function(){
         $('.list-card>.card').first().animate({'margin-left':'-351px'}, 1000, function(){
             $(this).first().detach().appendTo('.list-card').removeAttr('style');
         });
     });
 
-    $('.btn-prev').click(function(){
+    $('.card-nav .btn-prev').click(function(){
         $('.list-card>.card').last().detach().prependTo('.list-card').css('margin-left', '-351px');
         $('.list-card>.card').first().animate()({'margin-left':'0'}, 1000);
     });
@@ -242,4 +242,73 @@ $(function(){
     function getRandom(min, max){
         return Math.floor(Math.random()*(max-min+1)+1);
     }
+
+    var goodspage=1;
+    $('.goods .group-goods .btn-next').click(function(){
+        if($(this).parents('.shop-content').find('.list-goods-wrap').children().not('.display-none').next().length!=0){
+            $(this).parents('.shop-content').find('.list-goods-wrap').children().not('.display-none').next().removeClass('display-none').prev().addClass('display-none');
+            $(this).parents('.shop-content').find('.group-goods').find('.current').text(++goodspage);
+        }else{
+            $(this).parents('.shop-content').find('.list-goods-wrap').children().first().removeClass('display-none').siblings().last().addClass('display-none');
+            $(this).parents('.shop-content').find('.group-goods').find('.current').text(1);
+            goodspage=1;
+        }
+    });
+
+    $('.goods .group-goods .btn-prev').click(function(){
+        if($(this).parents('.shop-content').find('.list-goods-wrap').children().not('.display-none').prev().length!=0){
+            $(this).parents('.shop-content').find('.list-goods-wrap').children().not('.display-none').prev().removeClass('display-none').next().addClass('display-none');
+            $(this).parents('.shop-content').find('.group-goods').find('.current').text(--goodspage);
+        }else{
+            $(this).parents('.shop-content').find('.list-goods-wrap').children().last().removeClass('display-none').siblings().first().addClass('display-none');
+            $(this).parents('.shop-content').find('.group-goods').find('.current').text(19);
+            goodspage=19;
+        }
+    });
+
+    var mallpage=1;
+    $('.mall .group-goods .btn-next').click(function(){
+        if($(this).parents('.shop-content').find('.list-goods-wrap').children().not('.display-none').next().length!=0){
+            $(this).parents('.shop-content').find('.list-goods-wrap').children().not('.display-none').next().removeClass('display-none').prev().addClass('display-none');
+            $(this).parents('.shop-content').find('.group-goods').find('.current').text(++mallpage);
+        }else{
+            $(this).parents('.shop-content').find('.list-goods-wrap').children().first().removeClass('display-none').siblings().last().addClass('display-none');
+            $(this).parents('.shop-content').find('.group-goods').find('.current').text(1);
+            mallpage=1;
+        }
+    });
+
+    $('.mall .group-goods .btn-prev').click(function(){
+        if($(this).parents('.shop-content').find('.list-goods-wrap').children().not('.display-none').prev().length!=0){
+            $(this).parents('.shop-content').find('.list-goods-wrap').children().not('.display-none').prev().removeClass('display-none').next().addClass('display-none');
+            $(this).parents('.shop-content').find('.group-goods').find('.current').text(--mallpage);
+        }else{
+            $(this).parents('.shop-content').find('.list-goods-wrap').children().last().removeClass('display-none').siblings().first().addClass('display-none');
+            $(this).parents('.shop-content').find('.group-goods').find('.current').text(19);
+            mallpage=19;
+        }
+    });
+
+    var menpage=1;
+    $('.men .group-goods .btn-next').click(function(){
+        if($(this).parents('.shop-content').find('.list-goods-wrap').children().not('.display-none').next().length!=0){
+            $(this).parents('.shop-content').find('.list-goods-wrap').children().not('.display-none').next().removeClass('display-none').prev().addClass('display-none');
+            $(this).parents('.shop-content').find('.group-goods').find('.current').text(++menpage);
+        }else{
+            $(this).parents('.shop-content').find('.list-goods-wrap').children().first().removeClass('display-none').siblings().last().addClass('display-none');
+            $(this).parents('.shop-content').find('.group-goods').find('.current').text(1);
+            menpage=1;
+        }
+    });
+
+    $('.men .group-goods .btn-prev').click(function(){
+        if($(this).parents('.shop-content').find('.list-goods-wrap').children().not('.display-none').prev().length!=0){
+            $(this).parents('.shop-content').find('.list-goods-wrap').children().not('.display-none').prev().removeClass('display-none').next().addClass('display-none');
+            $(this).parents('.shop-content').find('.group-goods').find('.current').text(--menpage);
+        }else{
+            $(this).parents('.shop-content').find('.list-goods-wrap').children().last().removeClass('display-none').siblings().first().addClass('display-none');
+            $(this).parents('.shop-content').find('.group-goods').find('.current').text(19);
+            menpage=19;
+        }
+    });
 });

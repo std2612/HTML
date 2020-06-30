@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클릭 예제</title>
+    <script src="/js/jquery.js"></script>
+    <style>
+        .out-box{
+            height: 500px;
+            width: 1300px;
+            border: 1px solid black;
+        }
+
+        .in-box{
+            margin: 50px;
+            display: inline-block;
+            height: 300px;
+            width: 300px;
+        }
+
+        .box1{
+            background-color: blue;
+        }
+
+        .box2{
+            background-color: red;
+        }
+
+        .box3{
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div class="out-box">
+        <div class="in-box box1"></div>
+        <div class="in-box box2"></div>
+        <div class="in-box box3"></div>
+    </div>
+    <script>
+        $(function(){
+            $('.in-box').click(function(){
+                alert($(this).css('background-color'));
+            });
+        });
+    </script>
+</body>
+</html>

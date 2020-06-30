@@ -8,7 +8,7 @@ $(function(){
     });
 
     function newsRolling(){
-        setInterval(function(){
+        return setInterval(function(){
             $('.issue').first().animate({'margin-top':'-24px'}, 700, function(){
                 $(this).first().detach().appendTo('.list-issue').removeAttr('style');
             });

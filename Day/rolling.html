@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>롤링 예제</title>
+    <script src="/js/jquery.js"></script>
+    <style>
+        .view-box{
+            position: relative;
+            height: 30px;
+            width: 300px;
+            border: 1px solid black;
+            overflow: hidden;
+        }
+
+        .total-box{
+            position: absolute;
+            right: 0px;
+            width: 300%;
+            height: 30px;
+        }
+
+        .box{
+            float: left;
+            height: 30px;
+            width: calc(100% / 3);
+        }
+
+        .first{
+            background-color: red;
+        }
+
+        .second{
+            background-color: orange;
+        }
+
+        .third{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="view-box">
+        <div class="total-box">
+            <div class="box first"></div>
+            <div class="box second"></div>
+            <div class="box third"></div>
+        </div>
+    </div>
+    <br>
+    <button>버튼</button>
+    <script>
+        $(function(){
+            $('button').click(function(){
+                if(!$('.box').is(':animated')){
+                    $('.total-box').animate({'right':'-=300px'}, 1000, function(){
+                        $(this).children().last().detach().prependTo('.total-box');
+                        $(this).css('right', '0');
+                    });
+                }
+            });
+
+            var roll=rolling();
+            function rolling(){
+                if(!$('.box').is(':animated')){
+                    return setInterval(function(){
+                        $('.total-box').animate({'right':'-=300px'}, 1000, function(){
+                            $(this).children().last().detach().prependTo('.total-box');
+                            $(this).css('right', '0');
+                        });
+                    }, 2000);
+                }
+            }
+
+            $('button').hover(function(){
+                clearInterval(roll);
+            }, function(){
+                roll=rolling();
+            });
+        });
+    </script>
+</body>
+</html>
