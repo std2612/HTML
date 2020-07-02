@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>에니메이트 예제</title>
+    <script src="/js/fontawesome.js"></script>
+    <script src="/js/jquery.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        body{
+            overflow: hidden;
+        }
+
+        .btn-menu{
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+            font-size: 30px;
+            text-align: center;
+            line-height: 50px;
+            background-color: aliceblue;
+            position: absolute;
+            top: 0;
+            right: 0;
+            color: black;
+        }
+
+        .menu-box{
+            position: absolute;
+            top: 60px;
+            right: -300px;
+            width: 300px;
+            height: 500px;
+            background-color: aliceblue;
+        }
+
+        .menu{
+            width: 200px;
+            height: 100px;
+            background-color: beige;
+            margin: 50px;
+            text-align: center;
+            line-height: 100px;
+            font-size: 50px;
+        }
+
+        .display-none{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <a href="javascript:;" class="btn-menu"><i class="fas fa-bars"></i><i class="fas fa-times display-none"></i></a>
+    <ul class="menu-box">
+        <li class="menu">메뉴1</li>
+        <li class="menu">메뉴2</li>
+        <li class="menu">메뉴3</li>
+    </ul>
+    
+    <script>
+        $(function(){
+            $('.btn-menu').click(function(){
+                if((!$(this).children().first().hasClass('display-none')) && !($('.menu-box').is(':animated'))){
+                    $(this).children().toggleClass('display-none');
+                    $('.menu-box').animate({'right':'0'}, 1000);
+                }else if((!$(this).children().last().hasClass('display-none')) && !($('.menu-box').is(':animated'))){
+                    $(this).children().toggleClass('display-none');
+                    $('.menu-box').animate({'right':'-300px'}, 1000);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>댓글</title>
+    <script src="/js/fontawesome.js"></script>
+    <script src="/js/jquery.js"></script>
+    <style>
+        .comment-box{
+            display: flex;
+            border: 1px solid black;
+            width: 700px;
+            height: 40px;
+        }
+
+        .name-box{
+            position: relative;
+            border-right: 1px solid black;
+            width: 100px;
+            height: 40px;
+        }
+
+        input.name{
+            position: absolute;
+            top: 4px;
+            left: 10px;
+            border: none;
+            line-height: 30px;
+            width: 80%;
+        }
+
+        .comment-box>div{
+            float: left;
+        }
+
+        .content-box{
+            position: relative;
+            border-right: 1px solid black;
+            width: 500px;
+            height: 40px;
+        }
+
+        input.content{
+            position: absolute;
+            top: 4px;
+            left: 10px;
+            border: none;
+            line-height: 30px;
+            width: 95%;
+        }
+
+        .confirm-box{
+            text-decoration: none;
+            color: black;
+            height: 100%;
+            width: 100px;
+            line-height: 40px;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .comments-box{
+            border: 1px solid black;
+            width: 680px;
+            height: 500px;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        .delete{
+            display: inline-block;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="comments-box">
+        댓글 0<br><br>
+    </div>
+    <form action="">
+        <div class="comment-box">
+            <div class="name-box">
+                <input type="text" class="name" placeholder="닉네임" id="name">
+            </div>
+            <div class="content-box">
+                <input type="text" class="content" placeholder="내용" id="content">
+            </div>
+            <a href="javascript:;" class="confirm-box" type="submit">확인</button>
+        </div>
+    </form>
+
+    <script>
+        $(function(){
+            $('.confirm-box').click(function(){
+                var name=$('#name').val();
+                var content=$('#content').val();
+                var commentsBox=$('.comments-box').html();
+                $('.comments-box').html(commentsBox+'<span>'+name+' '+content+'<span class="delete">삭제</span></span><br>');
+                $('#name').val('');
+                $('#content').val('');
+                deletebtn();
+            });
+        });
+
+        function deletebtn(){
+            $('.delete').click(function(){
+                $(this).parent().next().remove();
+                $(this).parent().remove();
+            });
+        }
+    </script>
+</body>
+</html>

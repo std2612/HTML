@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>롤링 예제</title>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/fontawesome.js"></script>
+    <style>
+        .view-box{
+            position: relative;
+            height: 50px;
+            width: 300px;
+            border: 1px solid black;
+            overflow: hidden;
+        }
+
+        .total-box{
+            position: absolute;
+            right: 0px;
+            width: 300%;
+            height: 50px;
+        }
+
+        .box{
+            float: left;
+            height: 50px;
+            width: calc(100% / 3);
+            background-image: url(/Day30/dog.jpg);
+            background-size: contain;
+            background-position: center;
+        }
+
+        .first{
+            background-color: red;
+        }
+
+        .second{
+            background-color: orange;
+        }
+
+        .third{
+            background-color: yellow;
+        }
+
+        .btn{
+            background-color: black;
+            position: absolute;
+            top: 3px;
+            bottom: 3px;
+            width: 20px;
+            font-size: 30px;
+            line-height: 40px;
+            text-align: center;
+            color: white;
+        }
+
+        .btn-prev{
+            left: 3px;
+
+        }
+
+        .btn-next{
+            right: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="view-box">
+        <div class="total-box">
+            <div class="box first"></div>
+            <div class="box second"></div>
+            <div class="box third"></div>
+        </div>
+        <a href="javascript:;" class="btn btn-prev"><i class="fas fa-angle-left"></i></a>
+        <a href="javascript:;" class="btn btn-next"><i class="fas fa-angle-right"></i></a>
+    </div>
+    <script>
+        $(function(){
+            $('.btn-next').click(function(){
+                if(!$('.total-box').is(':animated')){
+                    $('.total-box').animate({'right':'-=300px'}, 1000, function(){
+                        $(this).children().last().detach().prependTo(this);
+                        $(this).css('right', '0');
+                    });
+                }
+            });
+
+            $('.btn-prev').click(function(){
+                if(!$('.total-box').is(':animated')){
+                    $('.total-box').css('right', '-300px').children().first().detach().appendTo('.total-box');
+                    $('.total-box').animate({'right':'+=300px'}, 1000, function(){
+                        $(this).css('right', '0');
+                    });
+                }
+            });
+
+            var roll=rolling();
+            function rolling(){
+                if(!$('.total-box').is(':animated')){
+                    return setInterval(function(){
+                        $('.total-box').animate({'right':'-=300px'}, 1000, function(){
+                            $(this).children().last().detach().prependTo('.total-box');
+                            $(this).css('right', '0');
+                        });
+                    }, 3000);
+                }
+            }
+
+            $('.view-box').hover(function(){
+                clearInterval(roll);
+            }, function(){
+                roll=rolling();
+            });
+        });
+    </script>
+</body>
+</html>

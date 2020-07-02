@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제</title>
+    <script src="/js/fontawesome.js"></script>
+    <script src="/js/jquery.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu-box{
+            position: relative;
+            text-align: center;
+            margin: 10px auto;
+            width: 1000px;
+            height: 100px;
+            border: 1px solid black;
+            overflow: hidden;
+        }
+
+        ul{
+            position: absolute;
+            display: flex;
+            width: 200%;
+            height: 100%;
+            left: 1px;
+        }
+
+        ul[aria-selected="false"]{
+            display: none;
+        }
+
+        .menu{
+            box-sizing: border-box;
+            line-height: 100px;
+            height: 100%;
+            width: calc(100% / 3);
+            display: inline-block;
+            cursor: pointer;
+        }
+        
+        .menu+.menu{
+            border-left: 1px solid black;
+        }
+
+        .menu[aria-selected="true"]{
+            background-color: blanchedalmond;
+        }
+
+        .content-box{
+            margin: auto;
+            width: 1000px;
+            height: 500px;
+            border: 1px solid black;
+        }
+        
+        .content{
+            width: 100%;
+            height: 100%;
+        }
+
+        .content[aria-selected="false"]{
+            display: none;
+        }
+
+        .display-none{
+            display: none;
+        }
+
+        .btn{
+            color: black;
+            text-align: center;
+            font-size: 20px;
+            position: absolute;
+            top: 35px;
+            height: 30px;
+            width: 30px;
+            border: 1px solid black;
+            border-radius: 30px;
+            box-sizing: border-box;
+            background-color: #fff;
+        }
+
+        .btn-prev{
+            left: 5px;
+        }
+
+        .btn-next{
+            right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="menu-box">
+        <ul>
+            <li class="menu" data-target="menu1" aria-selected="true">메뉴1</li>
+            <li class="menu" data-target="menu2">메뉴2</li>
+            <li class="menu" data-target="menu3">메뉴3</li>
+            <li class="menu" data-target="menu4">메뉴4</li>
+            <li class="menu" data-target="menu5">메뉴5</li>
+            <li class="menu" data-target="menu6">메뉴6</li>
+        </ul>
+        <a href="javascript:;" class="btn btn-prev display-none"><i class="fas fa-angle-left"></i></a>
+        <a href="javascript:;" class="btn btn-next"><i class="fas fa-angle-right"></i></a>
+    </nav>
+    <div class="content-box">
+        <div class="content content-menu1" aria-selected="true">내용1</div>
+        <div class="content content-menu2" aria-selected="false">내용2</div>
+        <div class="content content-menu3" aria-selected="false">내용3</div>
+        <div class="content content-menu4" aria-selected="false">내용4</div>
+        <div class="content content-menu5" aria-selected="false">내용5</div>
+        <div class="content content-menu6" aria-selected="false">내용6</div>
+    </div>
+
+    <script>
+        $(function(){
+            $('.menu').click(function(){
+                $('.menu').attr('aria-selected', false);
+                $(this).attr('aria-selected', true);
+                $('.content').attr('aria-selected', false);
+                $('.content-'+($(this).attr('data-target'))).attr('aria-selected', true);
+                btnView();
+            });
+
+            $('.btn-next').click(function(){
+                $('.menu[aria-selected="true"]').next().attr('aria-selected', true).prev().attr('aria-selected', false);
+                $('.content[aria-selected="true"]').next().attr('aria-selected', true).prev().attr('aria-selected', false);
+                menuView();
+                btnView();
+            });
+
+            $('.btn-prev').click(function(){
+                $('.menu[aria-selected="true"]').prev().attr('aria-selected', true).next().attr('aria-selected', false);
+                $('.content[aria-selected="true"]').prev().attr('aria-selected', true).next().attr('aria-selected', false);
+                menuView();
+                btnView();
+            });
+
+            function menuView(){
+                if($('.menu[aria-selected="true"]').nextAll().length>=3){
+                    $('ul').animate({'left': '1px'}, 1000);
+                }else{
+                    $('ul').animate({'left': '-1000px'}, 1000);
+                }
+            }
+
+            function btnView(){
+                if($('.menu[aria-selected="true"]').next().length==0){
+                    $('.btn-next').addClass('display-none');
+                }else{
+                    $('.btn-next').removeClass('display-none');
+                }if($('.menu[aria-selected="true"]').prev().length==0){
+                    $('.btn-prev').addClass('display-none');
+                }else{
+                    $('.btn-prev').removeClass('display-none');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

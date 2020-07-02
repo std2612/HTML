@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제</title>
+    <script src="/js/fontawesome.js"></script>
+    <script src="/js/jquery.js"></script>
+    <style>
+        .login-box{
+            width: 500px;
+            height: 200px;
+            border: solid 1px black;
+            box-sizing: border-box;
+            background-color: aliceblue;
+        }
+
+        .id-box,
+        .pw-box{
+            margin: 20px 49px;
+            width: 400px;
+            height: 40px;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 36px;
+            box-sizing: border-box;
+        }
+
+        .input-id,
+        .input-pw{
+            margin: auto;
+            height: 25px;
+            width: 90%;
+            border: none;
+            background-color: aliceblue;
+        }
+
+        .btn-login,
+        .btn-close{
+            margin-left: 49px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <div class="id-box">
+            <input type="text" name="id" id="id" class="input-id" placeholder="아이디">
+        </div>
+        <div class="pw-box">
+            <input type="password" name="pw" id="pw" class="input-pw" placeholder="비밀번호">
+        </div>
+        <button class="btn-login">로그인</button>
+        <button class="btn-close"><i class="fas fa-times"></i></button>
+    </div>
+
+    <script>
+        $(function(){
+           $('.btn-close').click(function(){
+               window.close();
+           });
+        });
+    </script>
+</body>
+</html>
